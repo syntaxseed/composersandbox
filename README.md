@@ -2,7 +2,7 @@
 
 Composer, git and library experimentation sandbox.
 
-Develasaurus - Licence : Public Domain
+SyntaxSeed - Licence : Public Domain
 
 ### What is this repository for? ###
 
