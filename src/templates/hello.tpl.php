@@ -1,0 +1,1 @@
+Hello <?=$tpl_name;?>, how are you?

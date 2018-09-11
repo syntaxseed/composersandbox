@@ -1,0 +1,22 @@
+{
+    "name": "sherriw/ComposerExample",
+    "description": "Composer Example",
+    "authors": [
+        {
+            "name": "Sherri Wheeler",
+            "email": "sherri.wheeler@gmail.com"
+        }
+    ],
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/syntaxseed/templateseed" }
+    ],
+    "require": {
+        "pimple/pimple": "^3.0",
+        "monolog/monolog": "^1.23",
+        "syntaxseed/templateseed": "~1.0",
+        "teamtnt/tntsearch": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    }
+}
