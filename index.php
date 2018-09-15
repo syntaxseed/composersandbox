@@ -1,4 +1,6 @@
 <?php
+/* Testing packages and autoloader.
+ */
 require_once 'vendor/autoload.php';
 
 // Dependencies:
