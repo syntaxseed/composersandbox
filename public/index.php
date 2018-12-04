@@ -1,27 +1,18 @@
 <?php
-require_once 'vendor/autoload.php';
-
-// Dependencies:
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
 use Syntaxseed\Templateseed\TemplateSeed;
-use TeamTNT\TNTSearch\TNTSearch;
+//use TeamTNT\TNTSearch\TNTSearch;
 
 
-// Set up DI container:
-$container = require 'config/container.php';
-
-// Set up logging:
-$container['logger'] = new Logger('applog');
-$container['logger']->pushHandler(new StreamHandler(__DIR__.'/logs/app.log', $container['env']['logging_level']));
-
+require_once '../app/bootstrap.php';
 
 
 // ****** SANDBOX - trying things out below. ******************
 
-$tpl = new TemplateSeed(__DIR__.'/src/templates/');
+echo( '<img src="images/templateseed.png" alt="TemplateSeed image" /><br clear="all"><br>');
+
+$tpl = new TemplateSeed(__DIR__.'/../src/templates/');
 echo $tpl->render('theme/hello', ['name' => 'World']);
-echo("\n\n");
+
 
 
 // TNT Search
@@ -70,10 +61,9 @@ var_dump($results);
 //$container['logger']->error('Bar');
 //$container['logger']->info('Some info here.');
 
+
+
 //echo( "Hello Composer! ".$container['config']['database']);
-
-//echo( "\nSecure config:  ".$container['config']['database']['dbuser']);
-
-echo("\n\n");
-
+//echo( "<br>Secure config:  ".$container['config']['database']['dbuser']);
+//echo("<br><br><pre>");
 //var_dump($container);
