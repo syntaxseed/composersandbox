@@ -1,11 +1,13 @@
 <?php
-require_once '../vendor/autoload.php';
-
-// Dependencies:
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use Syntaxseed\Templateseed\TemplateSeed;
-use TeamTNT\TNTSearch\TNTSearch;
+use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\Routing\RequestContext;
+use Symfony\Component\Routing\RouteCollection;
+use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+
+require_once '../vendor/autoload.php';
 
 
 // Set up DI container:
