@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 // Dependencies:
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use syntaxseed\templateseed\TemplateSeed;
+use Syntaxseed\Templateseed\TemplateSeed;
 use TeamTNT\TNTSearch\TNTSearch;
 
 
@@ -20,14 +20,13 @@ $container['logger']->pushHandler(new StreamHandler(__DIR__.'/logs/app.log', $co
 // ****** SANDBOX - trying things out below. ******************
 
 $tpl = new TemplateSeed(__DIR__.'/src/templates/');
-$tpl->setTemplate('theme/bye');
-$tpl->params->name = "Other Guy"; // Query the DB for this value or other time consuming steps.
-$tpl->render();
+echo $tpl->render('theme/hello', ['name' => 'World']);
 echo("\n\n");
 
 
 // TNT Search
 
+/*
 $indexName = 'test.index';
 $createIndex = false;
 $tntConfig = [
@@ -61,7 +60,7 @@ $tnt->selectIndex($indexName);
 $results = $tnt->search('article', 4);
 
 var_dump($results);
-
+*/
 
 
 

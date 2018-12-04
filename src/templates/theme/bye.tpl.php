@@ -1,1 +1,0 @@
-Goodbye <?=$tpl_name;?>!
