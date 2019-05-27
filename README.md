@@ -10,4 +10,4 @@ SyntaxSeed - Licence : Public Domain
 * Experimenting with Composer packages.
 * Practising with GIT.
 * Trying 3rd party libraries from Packagist.
-
+* Testing out a GitHooks setup with cghooks.
