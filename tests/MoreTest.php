@@ -7,15 +7,15 @@ namespace tests;
 
 use PHPUnit\Framework\TestCase;
 
-final class TestTest extends TestCase
+final class MoreTest extends TestCase
 {
 
-    public function testAStringEqualsAString()
+    public function testAnotherStringEqualsAString()
     {
-        $aString = 'This is a string.'; // Maybe this comes from a function or method you are testing.
+        $aString = 'This is another string.'; // Maybe this comes from a function or method you are testing.
 
         $this->assertEquals(
-            'This is a string.',
+            'This is another string.',
             $aString
         );
     }
