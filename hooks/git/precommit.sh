@@ -8,4 +8,4 @@ echo "\\033[01;104m ** PHPUNIT ** \\033[0m"
 phpunit --colors=always --bootstrap vendor/autoload.php
 if [ $? -ne 0 ]; then echo "\\033[01;104m\n ⯀ PHPUnit Did Not Pass \\033[0m"; exit 1; fi
 
-echo "\\033[01;104m\n ▶▶ Committing as $(git config user.name) \\033[0m"
+echo "\\033[01;104m\n ▶▶ Passed! Committing as $(git config user.name) \\033[0m"
