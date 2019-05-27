@@ -9,7 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 final class MoreTest extends TestCase
 {
-
     public function testAnotherStringEqualsAString()
     {
         $aString = 'This is another string.'; // Maybe this comes from a function or method you are testing.

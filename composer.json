@@ -30,6 +30,7 @@
     "extra": {
         "hooks": {
             "pre-commit": [
+                "set -- phpcsfixer phpcpd phpmd phpunit",
                 ". \"hooks/git/precommit.sh\""
             ]
         }
