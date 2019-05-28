@@ -13,9 +13,7 @@
         "teamtnt/tntsearch": "^1.3",
         "syntaxseed/iplimiter": "^1.0"
     },
-    "require-dev": {
-        "brainmaestro/composer-git-hooks": "^2.6"
-    },
+    "require-dev": {},
     "autoload": {
         "classmap": [],
         "psr-4": {
@@ -23,9 +21,12 @@
         }
     },
     "scripts": {
-        "cghooks": "vendor/bin/cghooks",
-        "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
-        "post-update-cmd": "vendor/bin/cghooks update"
+        "set-git-hooks" : [
+            "sh hooks/git/setup.sh --precommit=\"phpcsfixer phpcpd phpmd phpunit\""
+        ],
+        "post-install-cmd": "composer set-git-hooks",
+        "post-update-cmd": "composer set-git-hooks"
+
     },
     "extra": {
         "hooks": {

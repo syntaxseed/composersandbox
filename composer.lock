@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "326a5483d428fb40ed21de961c0043c0",
+    "content-hash": "bad9ee7c85081aa7810779e3d4c949ec",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -232,16 +232,16 @@
         },
         {
             "name": "syntaxseed/iplimiter",
-            "version": "v1.0.1",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/iplimiter.git",
-                "reference": "81f77086da473701dfe7185ab915f3771e5886a1"
+                "reference": "27113c5eda8cb0966eb33708493f4a3fca720a40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/81f77086da473701dfe7185ab915f3771e5886a1",
-                "reference": "81f77086da473701dfe7185ab915f3771e5886a1",
+                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/27113c5eda8cb0966eb33708493f4a3fca720a40",
+                "reference": "27113c5eda8cb0966eb33708493f4a3fca720a40",
                 "shasum": ""
             },
             "require": {
@@ -267,7 +267,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "PDO IP logging class to record, check and enforce number of attempts, and time since last attempt.",
+            "description": "A PHP IP logging library (framework agnostic) to track attempts and time since last attempt for an event by an IP address. Run an event against a ruleset to determine pass/fail. Supports banning.",
             "keywords": [
                 "IP",
                 "ip address",
@@ -275,20 +275,20 @@
                 "logging",
                 "pdo"
             ],
-            "time": "2019-01-26T15:15:24+00:00"
+            "time": "2019-02-05T16:02:52+00:00"
         },
         {
             "name": "syntaxseed/templateseed",
-            "version": "v1.1.2",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/templateseed.git",
-                "reference": "7f1d53a79d33202fc6eb8a6ccc00e409967c87f9"
+                "reference": "70e157381fa513e92e566824be18cc4437e7cff9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/7f1d53a79d33202fc6eb8a6ccc00e409967c87f9",
-                "reference": "7f1d53a79d33202fc6eb8a6ccc00e409967c87f9",
+                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/70e157381fa513e92e566824be18cc4437e7cff9",
+                "reference": "70e157381fa513e92e566824be18cc4437e7cff9",
                 "shasum": ""
             },
             "require": {
@@ -323,7 +323,7 @@
                 "templating",
                 "view"
             ],
-            "time": "2018-10-21T05:08:44+00:00"
+            "time": "2019-03-01T14:08:36+00:00"
         },
         {
             "name": "teamtnt/tntsearch",
@@ -382,277 +382,7 @@
             "time": "2018-10-18T11:00:04+00:00"
         }
     ],
-    "packages-dev": [
-        {
-            "name": "brainmaestro/composer-git-hooks",
-            "version": "v2.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/BrainMaestro/composer-git-hooks.git",
-                "reference": "137dd2aec2be494918f8bdfb18f57b55ff20015e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/BrainMaestro/composer-git-hooks/zipball/137dd2aec2be494918f8bdfb18f57b55ff20015e",
-                "reference": "137dd2aec2be494918f8bdfb18f57b55ff20015e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || >=7.0",
-                "symfony/console": "^3.2 || ^4.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.9",
-                "phpunit/phpunit": "^5.7|^7.0"
-            },
-            "bin": [
-                "cghooks"
-            ],
-            "type": "library",
-            "extra": {
-                "hooks": {
-                    "pre-commit": "composer check-style",
-                    "pre-push": [
-                        "composer test",
-                        "appver=$(grep -o -P '\\d.\\d.\\d' cghooks)",
-                        "tag=$(git tag --sort=-v:refname | head -n 1 | tr -d v)",
-                        "if [ \"$tag\" != \"$appver\" ]; then",
-                        "echo \"The most recent tag v$tag does not match the application version $appver\n\"",
-                        "sed -i -E \"s/$appver/$tag/\" cghooks",
-                        "exit 1",
-                        "fi"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BrainMaestro\\GitHooks\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ezinwa Okpoechi",
-                    "email": "brainmaestro@outlook.com"
-                }
-            ],
-            "description": "Easily manage git hooks in your composer config",
-            "keywords": [
-                "HOOK",
-                "composer",
-                "git"
-            ],
-            "time": "2018-12-28T14:57:06+00:00"
-        },
-        {
-            "name": "symfony/console",
-            "version": "v4.2.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
-                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.4",
-                "symfony/process": "<3.3"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~3.4|~4.0",
-                "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.4|~4.0"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/lock": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-04-08T14:23:48+00:00"
-        },
-        {
-            "name": "symfony/contracts",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/contracts.git",
-                "reference": "d3636025e8253c6144358ec0a62773cae588395b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/d3636025e8253c6144358ec0a62773cae588395b",
-                "reference": "d3636025e8253c6144358ec0a62773cae588395b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "psr/cache": "^1.0",
-                "psr/container": "^1.0",
-                "symfony/polyfill-intl-idn": "^1.10"
-            },
-            "suggest": {
-                "psr/cache": "When using the Cache contracts",
-                "psr/container": "When using the Service contracts",
-                "symfony/cache-contracts-implementation": "",
-                "symfony/event-dispatcher-implementation": "",
-                "symfony/http-client-contracts-implementation": "",
-                "symfony/service-contracts-implementation": "",
-                "symfony/translation-contracts-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\": ""
-                },
-                "exclude-from-classmap": [
-                    "**/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A set of abstractions extracted out of the Symfony components",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2019-04-27T14:29:50+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.11-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2019-02-06T07:57:58+00:00"
-        }
-    ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

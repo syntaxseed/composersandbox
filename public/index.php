@@ -50,7 +50,6 @@ var_dump($results);
 */
 
 
-
 // add records to the log
 //$container['logger']->warning('Foo');
 //$container['logger']->error('Bar');
@@ -60,4 +59,5 @@ var_dump($results);
 //echo( "Hello Composer! ".$container['config']['database']);
 //echo( "<br>Secure config:  ".$container['config']['database']['dbuser']);
 //echo("<br><br><pre>");
+
 //var_dump($container);
