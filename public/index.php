@@ -56,8 +56,8 @@ var_dump($results);
 //$container['logger']->info('Some info here.');
 
 
-//echo( "Hello Composer! ".$container['config']['database']);
+echo("Hello! Secure Config: ".$container['config']['database']['dbuser']);
 //echo( "<br>Secure config:  ".$container['config']['database']['dbuser']);
-//echo("<br><br><pre>");
+
 
 //var_dump($container);
