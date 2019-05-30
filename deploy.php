@@ -13,8 +13,11 @@ set('repository', 'https://syntaxseed@github.com/syntaxseed/composersandbox.git'
 set('git_tty', true);
 
 // Shared files/dirs between deploys
-set('shared_files', ['config/security.php']);
-set('shared_dirs', []);
+set('shared_files', [
+    'config/security.php',
+    'config/config.php'
+    ]);
+set('shared_dirs', ['logs/']);
 
 // Writable dirs by web server
 set('writable_dirs', []);
@@ -22,6 +25,14 @@ set('allow_anonymous_stats', false);
 
 // How many releases to keep.
 set('keep_releases', 3);
+
+// Files and directories to remove after clone/deploy.
+set('clear_paths', [
+    '.git/',
+    'hooks/',
+    '.gitignore',
+    'deploy.php'
+]);
 
 // Hosts
 
@@ -33,6 +44,11 @@ host('sherriwcom')
     ->set('deploy_path', '~/www/staging/composersandbox'); // No trailing slash!
 
 
+    task('testinfo', function () {
+        writeln('Hello world');
+    })
+       ->local();
+
 // Tasks
 desc('Deploy your project');
 task('deploy', [
@@ -42,13 +58,13 @@ task('deploy', [
     'deploy:release',       // Determine next release number/path. Delete unkept releases. Log releases in .dep/releases.
     'deploy:update_code',   // Git clone and checkout correct release.
     'deploy:shared',        // Symlink shared files and directories. Copies file to be shared from source if not already there.
-    'deploy:writable',
-    'deploy:vendors',
-    'deploy:clear_paths',
-    'deploy:symlink',
-    'deploy:unlock',
-    'cleanup',
-    'success'
+    'deploy:writable',      // Set the files and dirs writeable who need to be.
+    'deploy:vendors',       // Execute composer install command.
+    'deploy:clear_paths',   // Clean up files and dirs not needed.
+    'deploy:symlink',       // Symlink the release to current/ (now it's live!)
+    'deploy:unlock',        // Unlock the deployment.
+    'cleanup',              // Cleanup old releases.
+    'success'               // Show a success message.
 ]);
 
 // [Optional] If deploy fails automatically unlock.

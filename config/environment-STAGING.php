@@ -3,6 +3,6 @@
 
 return array(
     'logging_level' => Monolog\Logger::DEBUG,			// Which level to log to the logger.
-    'webroot' => '/',
-    'logs_dir' => __DIR__.'/../logs/app.log'
+    'logs_dir' => __DIR__.'/../../shared/logs/app.log',
+    'webroot' => '/'
 );

@@ -13,7 +13,7 @@ $container['env'] = include('environment-'.$container['config']['environment'].'
 
 // Set up logging:
 $container['logger'] = function () use ($container) {
-    return ((new Logger('applog'))->pushHandler(new StreamHandler(__DIR__.'/../logs/app.log', $container['env']['logging_level'])));
+    return ((new Logger('applog'))->pushHandler(new StreamHandler($container['env']['logs_dir'], $container['env']['logging_level'])));
 };
 
 return $container;

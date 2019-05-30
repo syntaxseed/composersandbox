@@ -51,7 +51,7 @@ var_dump($results);
 
 
 // add records to the log
-//$container['logger']->warning('Foo');
+$container['logger']->warning('Foo');
 //$container['logger']->error('Bar');
 //$container['logger']->info('Some info here.');
 

@@ -1,5 +1,0 @@
-* [31m822dcf9	[32m (origin/develop, develop)[0m Modify comment. (Playing with Git.
-* [31m504aba9	[32m[0m Added a comment.
-* [31mf62baf2	[32m (HEAD -> master, origin/master, origin/HEAD)[0m Modify readme.
-* [31m86b2427	[32m[0m Fix username in readme.
-* [31me3cf5ed	[32m[0m Initial add of files.
