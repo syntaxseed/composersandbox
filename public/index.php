@@ -55,9 +55,7 @@ var_dump($results);
 //$container['logger']->error('Bar');
 //$container['logger']->info('Some info here.');
 
-
 echo("Hello! Secure Config: ".$container['config']['database']['dbuser']);
 //echo( "<br>Secure config:  ".$container['config']['database']['dbuser']);
-
 
 //var_dump($container);
