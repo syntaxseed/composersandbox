@@ -17,7 +17,7 @@ set('shared_files', [
     'config/security.php',
     'config/config.php'
     ]);
-set('shared_dirs', ['logs/']);
+set('shared_dirs', ['logs']); // No trailing slash!!
 
 // Writable dirs by web server
 set('writable_dirs', []);
@@ -41,13 +41,7 @@ host('sherriwcom')
     ->set('composer_options', 'install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader --ignore-platform-reqs')
     ->set('bin/composer', '~/private/utils/composer.phar')
     ->set('branch', 'master')
-    ->set('deploy_path', '~/www/staging/composersandbox'); // No trailing slash!
-
-
-    task('testinfo', function () {
-        writeln('Hello world');
-    })
-       ->local();
+    ->set('deploy_path', '/home/horizon/www/staging/composersandbox'); // No trailing slash!
 
 // Tasks
 desc('Deploy your project');
