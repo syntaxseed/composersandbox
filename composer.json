@@ -22,15 +22,7 @@
     },
     "scripts": {
         "set-git-hooks" : [
-            "sh hooks/git/setup.sh --precommit=\"phpcsfixer phpcpd phpmd phpunit\""
+            "sh /home/sherriw/Development/Repos/Git/GreenDeployer/Common/TestSuite/Git/setup.sh --precommit=\"phpcsfixer phpcpd phpmd phpunit\""
         ]
-    },
-    "extra": {
-        "hooks": {
-            "pre-commit": [
-                "set -- phpcsfixer phpcpd phpmd phpunit",
-                ". \"hooks/git/precommit.sh\""
-            ]
-        }
     }
 }

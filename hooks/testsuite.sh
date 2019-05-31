@@ -1,3 +1,5 @@
+#!/bin/sh
+
 printf "\033[01;104m\n%-50s \\033[0m" " ▶▶ Running Git Pre-Commit Checks..."
 printf "\033[01;104m\n%-50s \\033[0m\n" " ▶▶ ($*)"
 
@@ -25,4 +27,4 @@ if [ `echo $* | grep phpunit| wc -l` -eq 1 ]; then
     if [ $? -ne 0 ]; then echo "\\033[01;41m\n ⯀ PHPUnit Did Not Pass \\033[0m"; exit 1; fi
 fi
 
-echo "\\033[01;104m\n ▶▶ Passed! Committing as $(git config user.name) \\033[0m"
+echo "\\033[01;104m\n ▶▶ Passed TestSuite! Committing as $(git config user.name) \\033[0m"
