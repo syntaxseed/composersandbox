@@ -20,3 +20,5 @@
 [2019-05-28 11:45:04] testlog.WARNING: Foo [] []
 [2019-05-28 11:45:06] testlog.WARNING: Foo [] []
 [2019-05-28 11:45:11] testlog.WARNING: Foo [] []
+[2019-06-17 18:15:19] applog.WARNING: Foo [] []
+[2019-06-17 18:15:22] applog.WARNING: Foo [] []

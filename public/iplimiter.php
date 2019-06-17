@@ -26,8 +26,7 @@ try {
 }
 
 $ipLimiter = (new IPLimiter($pdo, 'syntaxseed_iplimiter'))
-             ->event($_SERVER['REMOTE_ADDR'], 'ComposerTest')
-             ->log();
+             ->event($_SERVER['REMOTE_ADDR'], 'ComposerTest');
 
 /*
 $result = $ipLimiter->migrate()
@@ -50,9 +49,11 @@ $rule='{
     "allowBanned":false
 }';
 
-echo("<br><br>Passes rule?<br><pre>{$rule}</pre>...");
+$passes = $ipLimiter->rule($rule);
 
-echo(var_export($ipLimiter->rule($rule), true));
+echo("<br><br>Passes rule?<br><pre>{$rule}</pre>...".var_export($passes, true));
 
-echo("<br><br>Logged new event.");
+echo("<br><br>Are you banned?: ".var_export($ipLimiter->isBanned(), true));
+
 $ipLimiter->log();
+echo("<br><br>Logged new event.");
