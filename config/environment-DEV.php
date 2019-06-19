@@ -2,7 +2,9 @@
 // Config: Environment sepecific config settings.
 
 return array(
-    'logging_level' => Monolog\Logger::DEBUG,			// Which level to log to the logger.
-    'webroot' => '/',
-    'logs_dir' => __DIR__.'/../logs/app.log'
+    'env' => [
+        'logging_level' => Monolog\Logger::DEBUG,			// Which level to log to the logger.
+        'log_file' => __DIR__.'/../logs/app.log',
+        'webroot' => '/'
+    ]
 );

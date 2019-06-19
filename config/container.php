@@ -2,18 +2,28 @@
 use Pimple\Container;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
+use Syntaxseed\Templateseed\TemplateSeed;
 
 $container = new Container();
 
-// Base config:
-$container['config'] = array_merge(include('config.php'), include('security.php'));
+// General application settings config:
+$container['config'] = [];
+$container['config'] = include('config.php');
 
-// Environment specific config:
-$container['env'] = include('environment-'.$container['config']['environment'].'.php');
+$container['config'] = array_merge(
+    $container['config'],
+    // API Keys and database info, etc:
+    include('security-'.$container['config']['settings']['environment'].'.php'),
+    // Environment specific config:
+    include('environment-'.$container['config']['settings']['environment'].'.php')
+);
 
 // Set up logging:
 $container['logger'] = function () use ($container) {
-    return ((new Logger('applog'))->pushHandler(new StreamHandler($container['env']['logs_dir'], $container['env']['logging_level'])));
+    return ((new Logger('applog'))->pushHandler(new StreamHandler($container['config']['env']['log_file'], $container['config']['env']['logging_level'])));
 };
+
+// Set up templating/view class:
+$container['tpl'] = new TemplateSeed(__DIR__.'/../src/templates/');
 
 return $container;
