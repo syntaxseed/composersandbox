@@ -6,10 +6,10 @@ require_once '../app/bootstrap.php';
 
 // ****** SANDBOX - trying things out below. ******************
 
-$host = 'localhost';
-$db   = 'db1_sandbox';
-$user = 'db1_usr1';
-$pass = 'DB1USR1rt6';
+$host = $container['config']['database']['host'];
+$db   = $container['config']['database']['name'];
+$user = $container['config']['database']['user'];
+$pass = $container['config']['database']['password'];
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host={$host};dbname={$db};charset={$charset}";
