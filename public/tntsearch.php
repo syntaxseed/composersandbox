@@ -8,7 +8,7 @@ $createIndex = true;
 
 $tnt = $container['tntsearch'];
 
-if( $createIndex ){
+if ($createIndex) {
 
     // Creating a NEW index. Empty old one first:
     if (file_exists($tnt->config['storage'].$indexName)) {
@@ -24,8 +24,6 @@ if( $createIndex ){
     $indexer->insert(['id' => 4, 'content' => 'some stuff about interesting things']);
 
     $indexer->run();
-
-
 }
 
 $tnt->selectIndex($indexName);

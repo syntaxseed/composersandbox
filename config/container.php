@@ -5,7 +5,6 @@ use Monolog\Handler\StreamHandler;
 use Syntaxseed\Templateseed\TemplateSeed;
 use TeamTNT\TNTSearch\TNTSearch;
 
-
 $container = new Container();
 
 // General application settings config:
