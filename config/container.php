@@ -3,6 +3,8 @@ use Pimple\Container;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Syntaxseed\Templateseed\TemplateSeed;
+use TeamTNT\TNTSearch\TNTSearch;
+
 
 $container = new Container();
 
@@ -25,5 +27,18 @@ $container['logger'] = function () use ($container) {
 
 // Set up templating/view class:
 $container['tpl'] = new TemplateSeed(__DIR__.'/../src/templates/');
+
+// Set up tnt search:
+$container['tntsearch'] = function () use ($container) {
+    $tntConfig = [
+        "driver"    => 'filesystem',
+        "location"  => __DIR__.'/../tntsearch/dummysource/',
+        "extension" => "txt",
+        'storage'   => __DIR__.'/../tntsearch/indexes/'
+    ];
+    $tnt = new TNTSearch;
+    $tnt->loadConfig($tntConfig);
+    return $tnt;
+};
 
 return $container;

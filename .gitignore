@@ -13,6 +13,8 @@
 *.env
 *.env.*
 !*.env.example
+**/logs/*.log
 *.phpunit.result.cache
 **/config/security-*.php
 !**/config/security-EXAMPLE.php
+**/tntsearch/indexes/*.index
