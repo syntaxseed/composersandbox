@@ -6,6 +6,8 @@
 **/.idea
 **/.vscode
 **/.vagrant
+**/logs/*.log
+
 **Homestead.json
 **Homestead.yaml
 **npm-debug.log
