@@ -9,7 +9,7 @@ echo('<img src="images/templateseed.png" alt="TemplateSeed image" /><br clear="a
 
 echo $container['tpl']->render('theme/hello', ['name' => 'World']);
 
-echo("<br>Test on May 14.");
+echo("<br>Test on May 14 at 8:00 pm.");
 
 // add records to the log
 $container['logger']->warning('Logger Test from index.php.');
