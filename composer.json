@@ -10,7 +10,7 @@
         "pimple/pimple": "^3.0",
         "monolog/monolog": "^1.23",
         "syntaxseed/templateseed": "^1.0",
-        "syntaxseed/iplimiter": "^1.0",
+        "syntaxseed/iplimiter": "^2.0",
         "teamtnt/tntsearch": "^2.1"
     },
     "require-dev": {},

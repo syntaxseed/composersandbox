@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63048b6acd87d7d7b15f647433405495",
+    "content-hash": "75eaf325b11d3be80aef5f4b25b0495c",
     "packages": [
         {
             "name": "monolog/monolog",
-            "version": "1.24.0",
+            "version": "1.25.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
                 "shasum": ""
             },
             "require": {
@@ -31,11 +31,10 @@
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
+                "php-parallel-lint/php-parallel-lint": "^1.0",
                 "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
@@ -82,33 +81,43 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-05T09:00:11+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-23T08:35:51+00:00"
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.2.3",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
+                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
-                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e55d12f9d6a0e7f9c85992b73df1267f46279930",
+                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
+                "php": "^7.2.5",
                 "psr/container": "^1.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.2"
+                "symfony/phpunit-bridge": "^3.4|^4.4|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev"
+                    "dev-master": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -127,12 +136,12 @@
                 }
             ],
             "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "http://pimple.sensiolabs.org",
+            "homepage": "https://pimple.symfony.com",
             "keywords": [
                 "container",
                 "dependency injection"
             ],
-            "time": "2018-01-21T07:42:36+00:00"
+            "time": "2020-03-03T09:12:48+00:00"
         },
         {
             "name": "psr/container",
@@ -185,16 +194,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.0",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +212,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -228,27 +237,27 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-20T15:27:04+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "syntaxseed/iplimiter",
-            "version": "v1.0.6",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/iplimiter.git",
-                "reference": "b910e38c2fc96a7636fb088a0e84b3ea9aacc100"
+                "reference": "5abf607344714fb8e729c6dc19c2a4e150fec047"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/b910e38c2fc96a7636fb088a0e84b3ea9aacc100",
-                "reference": "b910e38c2fc96a7636fb088a0e84b3ea9aacc100",
+                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/5abf607344714fb8e729c6dc19c2a4e150fec047",
+                "reference": "5abf607344714fb8e729c6dc19c2a4e150fec047",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.2.*"
+                "phpunit/phpunit": "9.3.*"
             },
             "type": "library",
             "autoload": {
@@ -275,27 +284,27 @@
                 "logging",
                 "pdo"
             ],
-            "time": "2019-06-17T22:11:36+00:00"
+            "time": "2020-10-05T18:29:36+00:00"
         },
         {
             "name": "syntaxseed/templateseed",
-            "version": "v1.1.5",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/templateseed.git",
-                "reference": "70e157381fa513e92e566824be18cc4437e7cff9"
+                "reference": "ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/70e157381fa513e92e566824be18cc4437e7cff9",
-                "reference": "70e157381fa513e92e566824be18cc4437e7cff9",
+                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db",
+                "reference": "ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "5.2.*"
+                "phpunit/phpunit": "^8"
             },
             "type": "library",
             "autoload": {
@@ -323,20 +332,20 @@
                 "templating",
                 "view"
             ],
-            "time": "2019-03-01T14:08:36+00:00"
+            "time": "2019-10-01T02:41:51+00:00"
         },
         {
             "name": "teamtnt/tntsearch",
-            "version": "v2.1.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/teamtnt/tntsearch.git",
-                "reference": "9991c4c34500f19933329c114f8fdc13eddc64cb"
+                "reference": "01bb54c35a0c47eb41b145f76c384ef83b5a5852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/teamtnt/tntsearch/zipball/9991c4c34500f19933329c114f8fdc13eddc64cb",
-                "reference": "9991c4c34500f19933329c114f8fdc13eddc64cb",
+                "url": "https://api.github.com/repos/teamtnt/tntsearch/zipball/01bb54c35a0c47eb41b145f76c384ef83b5a5852",
+                "reference": "01bb54c35a0c47eb41b145f76c384ef83b5a5852",
                 "shasum": ""
             },
             "require": {
@@ -379,7 +388,21 @@
                 "teamtnt",
                 "tntsearch"
             ],
-            "time": "2019-05-08T08:27:37+00:00"
+            "funding": [
+                {
+                    "url": "https://ko-fi.com/nticaric",
+                    "type": "ko_fi"
+                },
+                {
+                    "url": "https://opencollective.com/tntsearch",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/nticaric",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-04-03T10:22:24+00:00"
         }
     ],
     "packages-dev": [],
@@ -389,5 +412,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

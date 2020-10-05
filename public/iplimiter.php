@@ -1,8 +1,8 @@
 <?php
-use Syntaxseed\IPLimiter\IPLimiter;
-
 require_once '../app/bootstrap.php';
 
+use Syntaxseed\IPLimiter\IPLimiter;
+use Syntaxseed\IPLimiter\DatabasePDO;
 
 // ****** SANDBOX - trying things out below. ******************
 
@@ -11,6 +11,7 @@ $db   = $container['config']['database']['name'];
 $user = $container['config']['database']['user'];
 $pass = $container['config']['database']['password'];
 $charset = 'utf8mb4';
+
 
 $dsn = "mysql:host={$host};dbname={$db};charset={$charset}";
 $options = [
@@ -25,19 +26,17 @@ try {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-$ipLimiter = (new IPLimiter($pdo, 'syntaxseed_iplimiter'))
+$ipLimiter = (new IPLimiter(new DatabasePDO($pdo), 'syntaxseed_iplimiter'))
              ->event($_SERVER['REMOTE_ADDR'], 'ComposerTest');
 
 /*
-$result = $ipLimiter->migrate()
+$result = $ipLimiter->migrate();
 if($result){
     echo('Created Database!');
 }else{
     echo($ipLimiter->getLastError());
 }
 */
-
-//$ipLimiter->event($_SERVER['REMOTE_ADDR'], 'ComposerTest');
 
 echo("Attempts: ".$ipLimiter->attempts());
 echo("<br>Seconds Since Last: ".$ipLimiter->last());
