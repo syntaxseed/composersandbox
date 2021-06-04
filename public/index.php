@@ -11,6 +11,7 @@ echo("sherri.dev<br><br>Test on Dec 14, 11am.<br><br>");
 
 echo $container['tpl']->render('theme/hello', ['name' => 'World']);
 
+//Test
 
 // add records to the log
 $container['logger']->warning('Logger Test from index.php.');
