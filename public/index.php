@@ -7,7 +7,7 @@ require_once '../app/bootstrap.php';
 
 //echo('<img src="images/templateseed.png" alt="TemplateSeed image" /><br clear="all"><br>');
 
-echo("sherri.dev<br><br>Test on Dec 14, 11am.<br><br>");
+echo("sherri.dev<br><br>Test on June 11, 12pm.<br><br>");
 
 echo $container['tpl']->render('theme/hello', ['name' => 'World']);
 
