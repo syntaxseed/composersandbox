@@ -13,6 +13,7 @@ $pass = $container['config']['database']['password'];
 $charset = 'utf8mb4';
 
 
+
 $dsn = "mysql:host={$host};dbname={$db};charset={$charset}";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -26,10 +27,14 @@ try {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
+
+
 $ipLimiter = (new IPLimiter(new DatabasePDO($pdo), 'syntaxseed_iplimiter'))
              ->event($_SERVER['REMOTE_ADDR'], 'ComposerTest');
 
+
 /*
+// Run this once to set up the ipLimiter database tables.
 $result = $ipLimiter->migrate();
 if($result){
     echo('Created Database!');
@@ -37,6 +42,8 @@ if($result){
     echo($ipLimiter->getLastError());
 }
 */
+
+
 
 echo("Attempts: ".$ipLimiter->attempts());
 echo("<br>Seconds Since Last: ".$ipLimiter->last());

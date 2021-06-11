@@ -12,5 +12,5 @@ https://home.avinus.com/doku.php/group:team:projects:composer_sandbox
 * Experimenting with Composer packages.
 * Practising with GIT.
 * Trying 3rd party libraries from Packagist.
-* Testing out a GitHooks setup with Green Deployer.
+* Testing out a GitHooks calling Composer scripts.
 * Deployed via Ansible. See wiki notes.

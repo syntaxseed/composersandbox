@@ -7,11 +7,11 @@
         }
     ],
     "require": {
-        "pimple/pimple": "^3.0",
-        "monolog/monolog": "^1.23",
-        "syntaxseed/templateseed": "^1.0",
+        "pimple/pimple": "^3.4",
+        "monolog/monolog": "^1.26",
+        "syntaxseed/templateseed": "^1.2",
         "syntaxseed/iplimiter": "^2.0",
-        "teamtnt/tntsearch": "^2.1"
+        "teamtnt/tntsearch": "^2.8"
     },
     "require-dev": {},
     "autoload": {
@@ -23,6 +23,19 @@
     "scripts": {
         "set-git-hooks" : [
             "sh /home/sherriw/Development/Repos/Git/GreenDeployer/Common/TestSuite/Git/setup.sh --precommit=\"phpcsfixer phpcpd phpmd phpunit\""
+        ],
+        "run-checks": [
+            "php-cs-fixer fix . --rules=@PSR1,@PSR2,full_opening_tag --using-cache=no --verbose --dry-run",
+            "phpcs --standard=PHPCompatibility --runtime-set testVersion 7.4- . ",
+            "phpmd . text cleancode,codesize,unusedcode,naming,design --exclude \"*/vendor/*\"",
+            "phpcpd --exclude=vendor/ tests/ ."
+        ],
+        "run-tests": [
+            "phpunit --colors=always --bootstrap vendor/autoload.php"
+        ],
+        "run-hooks": [
+            "@run-checks",
+            "@run-tests"
         ]
     }
 }
