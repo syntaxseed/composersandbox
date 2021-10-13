@@ -12,7 +12,8 @@
         "syntaxseed/templateseed": "^1.2",
         "syntaxseed/iplimiter": "^2.0",
         "teamtnt/tntsearch": "^2.8",
-        "symfony/mailer": "^5.3"
+        "symfony/mailer": "^5.3",
+        "neoteknic/phue": "^1.8"
     },
     "autoload": {
         "classmap": [],
