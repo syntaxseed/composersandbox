@@ -1,6 +1,9 @@
 <?php
 //use TeamTNT\TNTSearch\TNTSearch;
 
+use chillerlan\QRCode\QRCode;
+use chillerlan\QRCode\QROptions;
+
 require_once '../app/bootstrap.php';
 
 // ****** SANDBOX - trying things out below. ******************
@@ -20,3 +23,20 @@ $container['logger']->warning('Logger Test from index.php.');
 
 //echo( '<pre>');
 //var_dump($container);
+
+
+
+// QR Code library
+
+$data = 'https://www.avinus.com';
+
+$options = new QROptions([
+    'version'    => 5,
+    'outputType' => QRCode::OUTPUT_IMAGE_PNG,
+    'eccLevel'   => QRCode::ECC_M,
+]);
+
+$qrcode = new QRCode($options);
+
+// quick and simple:
+echo '<img src="' . $qrcode->render($data) . '" alt="QR Code" />';
