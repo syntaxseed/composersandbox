@@ -1592,23 +1592,23 @@
         },
         {
             "name": "syntaxseed/templateseed",
-            "version": "v1.2.6",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/templateseed.git",
-                "reference": "ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db"
+                "reference": "7c7d7b57d23aaa9e8f75911e10930f7de49d9f93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db",
-                "reference": "ea5e6c5b3d1de3f19ee89d250fd1f7737c7633db",
+                "url": "https://api.github.com/repos/syntaxseed/templateseed/zipball/7c7d7b57d23aaa9e8f75911e10930f7de49d9f93",
+                "reference": "7c7d7b57d23aaa9e8f75911e10930f7de49d9f93",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": "^7.2|^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8"
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "autoload": {
@@ -1638,9 +1638,19 @@
             ],
             "support": {
                 "issues": "https://github.com/syntaxseed/templateseed/issues",
-                "source": "https://github.com/syntaxseed/templateseed/tree/master"
+                "source": "https://github.com/syntaxseed/templateseed/tree/v1.3.0"
             },
-            "time": "2019-10-01T02:41:51+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/syntaxseed#donatecontribute",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/syntaxseed",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-02T16:22:39+00:00"
         },
         {
             "name": "teamtnt/tntsearch",
