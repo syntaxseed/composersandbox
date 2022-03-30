@@ -13,6 +13,9 @@ require_once '../vendor/autoload.php';
  * https://github.com/neoteknic/Phue
  */
 
+ // Finding Hue IP
+ // nmap -sP 192.168.1.255/24 > /dev/null; sudo arp -na | grep "at 00:17:88"
+
 
 $client = new Client('192.168.1.2', 'Se5sEWE5Lin30rOu5zNG0K7acvZZuNPp0DHT3mfQ');
 
@@ -24,16 +27,18 @@ try {
     $lights = $client->getLights();
 
     foreach ($lights as $lightId => $light) {
-        echo "Id #{$lightId} - {$light->getName()}", "<br>";
+        echo "Id #{$lightId} - {$light->getName()}<br>";
     }
 
     echo('<hr>');
 
     foreach ($client->getGroups() as $group) {
-        echo "Id #{$group->getId()} - {$group->getName()}", "\n", " (Type: ", $group->getType(), ") ", "Lights: ", implode(
-            ', ',
-            $group->getLightIds()
-        ), "<br>";
+        $groupLightIds = implode(', ', $group->getLightIds());
+        echo <<<EOT
+            Id #{$group->getId()} - {$group->getName()}
+            (Type: {$group->getType()})
+            Lights: {$groupLightIds}<br>
+        EOT;
     }
 
 
