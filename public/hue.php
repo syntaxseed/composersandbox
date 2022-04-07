@@ -13,9 +13,12 @@ require_once '../vendor/autoload.php';
  * https://github.com/neoteknic/Phue
  */
 
- // Finding Hue IP
- // nmap -sP 192.168.1.255/24 > /dev/null; sudo arp -na | grep "at 00:17:88"
+// Finding Hue IP
+// nmap -sP 192.168.1.255/24 > /dev/null; sudo arp -na | grep "at 00:17:88"
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $client = new Client('192.168.1.2', 'Se5sEWE5Lin30rOu5zNG0K7acvZZuNPp0DHT3mfQ');
 
@@ -24,15 +27,19 @@ try {
         new Ping
     );
 
-    $lights = $client->getLights();
 
+    $lights = $client->getLights();
+    $groups = $client->getGroups();
+
+    /*
     foreach ($lights as $lightId => $light) {
         echo "Id #{$lightId} - {$light->getName()}<br>";
     }
+    */
 
     echo('<hr>');
-
-    foreach ($client->getGroups() as $group) {
+    /*
+    foreach ($groups as $group) {
         $groupLightIds = implode(', ', $group->getLightIds());
         echo <<<EOT
             Id #{$group->getId()} - {$group->getName()}
@@ -40,40 +47,67 @@ try {
             Lights: {$groupLightIds}<br>
         EOT;
     }
-
-
-
-    $light = $lights[1];
-
-
-    $light->setOn(true);
-    $light->setRGB(100, 10, 10);
-    $light->setBrightness(255);
-
-    $light->setEffect('none'); // none or colorloop
-
+    */
 
     /*
-    // Candle effect:
+    Id #1 - Hue color lamp 1
+    Id #2 - Hue color lamp 2
+    Id #3 - Hue color -Sherri's bedside
+    Id #4 - Hue color - Kevin's bedside
+    Id #1 - Master Bedroom (Type: Room) Lights: 4, 3
+    Id #2 - Family Room (Type: Room) Lights: 1, 2
+    */
 
-    for($i = 1; $i < 100; $i++) {
-        // Randomly choose values
-        $brightness = rand(20, 60);
-        $colorTemp = rand(440, 450);
+
+
+    $light = $lights[2];
+
+    $light->setOn(false);
+
+    sleep(2); // Wait for 2 seconds.
+    $light->setOn(true);
+    $light->setBrightness(100);
+
+    // $light->setColorTemp(153);
+    // sleep(2); // Wait for 2 seconds.
+    // $light->setColorTemp(200);
+    // sleep(2); // Wait for 2 seconds.
+    // $light->setColorTemp(400);
+    // sleep(2); // Wait for 2 seconds.
+
+    //$light->setEffect('colorloop');
+
+    // $light->setRGB(255, 0, 0);
+    // sleep(2); // Wait for 2 seconds.
+    // $light->setRGB(0, 255, 0);
+    // sleep(2); // Wait for 2 seconds.
+    // $light->setRGB(0, 0, 255);
+    //$light->setBrightness(255);
+
+    //$light->setEffect('none'); // none or colorloop
+
+
+
+    // Flickering candle effect.
+    for ($i = 1; $i < 100; $i++) {
+        // Randomly choose values.
+        $brightness = rand(20, 50);
+        $colorTemp = rand(420, 450);
         $transitionTime = rand(0, 3) / 10;
+        $waitTime = $transitionTime;
 
-        // Send command
-
-        $x = new SetLightState(1);
-        $y = $x->brightness($brightness)
+        // Setup command.
+        $command = new SetLightState(2);
+        $command->brightness($brightness)
             ->colorTemp($colorTemp)
             ->transitionTime($transitionTime);
-        $client->sendCommand($y);
 
-        // Sleep for transition time plus extra for request time
-        usleep($transitionTime * 1000000 + 25000);
+        // Send command.
+        $client->sendCommand($command);
+
+        // Sleep for transition time plus some extra for request time.
+        usleep($waitTime * 1000000 + 25000);
     }
-    */
 } catch (ConnectionException $e) {
     echo 'ERROR: There was a problem accessing the Hue bridge.';
 }
