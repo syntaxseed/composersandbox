@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "333294d94cc1a408143b0ed5761bd005",
+    "content-hash": "f955fd6b1028c38726cf0958a09fc94b",
     "packages": [
         {
             "name": "chillerlan/php-qrcode",
@@ -377,71 +377,6 @@
                 }
             ],
             "time": "2021-05-28T08:32:12+00:00"
-        },
-        {
-            "name": "neoteknic/phue",
-            "version": "1.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/neoteknic/Phue.git",
-                "reference": "07375fd8524bf7ca2e71438545800b0f892ba59a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/neoteknic/Phue/zipball/07375fd8524bf7ca2e71438545800b0f892ba59a",
-                "reference": "07375fd8524bf7ca2e71438545800b0f892ba59a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "7.4.*|8.*"
-            },
-            "require-dev": {
-                "mockery/mockery": "1.*",
-                "phpunit/phpunit": "9.*"
-            },
-            "suggest": {
-                "ext-curl": "Allows usage of cURL transport adapter"
-            },
-            "bin": [
-                "bin/phue-create-user",
-                "bin/phue-bridge-finder",
-                "bin/phue-light-finder",
-                "bin/phue-list-lights"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Phue": "library/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Squires",
-                    "email": "sqmk@php.net",
-                    "role": "lead"
-                },
-                {
-                    "name": "Jens Reinemuth",
-                    "email": "jens@reinemuth.rocks",
-                    "role": "developer"
-                }
-            ],
-            "description": "Phue - Philips Hue PHP client - Fork by Neoteknic - extra features",
-            "homepage": "https://github.com/neoteknic/Phue",
-            "keywords": [
-                "client",
-                "hue",
-                "philips",
-                "phue"
-            ],
-            "support": {
-                "source": "https://github.com/neoteknic/Phue/tree/1.8.1"
-            },
-            "time": "2021-05-25T14:09:18+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -1590,6 +1525,75 @@
                 }
             ],
             "time": "2022-03-13T15:58:53+00:00"
+        },
+        {
+            "name": "syntaxseed/phue",
+            "version": "v1.8.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/syntaxseed/phue.git",
+                "reference": "9fcaef9e4e8c8553d3d43ea4805c858ed777d1f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/syntaxseed/phue/zipball/9fcaef9e4e8c8553d3d43ea4805c858ed777d1f3",
+                "reference": "9fcaef9e4e8c8553d3d43ea4805c858ed777d1f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.4.*|8.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "1.*",
+                "phpunit/phpunit": "9.*"
+            },
+            "suggest": {
+                "ext-curl": "Allows usage of cURL transport adapter"
+            },
+            "bin": [
+                "bin/phue-create-user",
+                "bin/phue-bridge-finder",
+                "bin/phue-light-finder",
+                "bin/phue-list-lights"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Phue": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Squires",
+                    "email": "sqmk@php.net",
+                    "role": "lead"
+                },
+                {
+                    "name": "Jens Reinemuth",
+                    "email": "jens@reinemuth.rocks",
+                    "role": "developer"
+                },
+                {
+                    "name": "Sherri Wheeler",
+                    "role": "developer"
+                }
+            ],
+            "description": "Phue - Philips Hue PHP client - Fork by SyntaxSeed - extra features, bug fixes.",
+            "homepage": "https://github.com/syntaxseed/Phue",
+            "keywords": [
+                "client",
+                "hue",
+                "philips",
+                "phue"
+            ],
+            "support": {
+                "source": "https://github.com/syntaxseed/phue/tree/v1.8.4"
+            },
+            "time": "2022-04-08T15:09:56+00:00"
         },
         {
             "name": "syntaxseed/templateseed",

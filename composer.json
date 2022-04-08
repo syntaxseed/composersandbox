@@ -13,8 +13,8 @@
         "syntaxseed/iplimiter": "^2.0",
         "teamtnt/tntsearch": "^2.8",
         "symfony/mailer": "^5.3",
-        "neoteknic/phue": "^1.8",
-        "chillerlan/php-qrcode": "^4.3"
+        "chillerlan/php-qrcode": "^4.3",
+        "syntaxseed/phue": "^1.8"
     },
     "autoload": {
         "classmap": [],
