@@ -1,12 +1,13 @@
 <?php
-use \Phue\Client;
-use \Phue\Command\CreateScene;
-use \Phue\Command\DeleteScene;
-use \Phue\Command\GetLights;
-use \Phue\Command\Ping;
-use \Phue\Command\SetGroupState;
-use \Phue\Command\SetLightState;
-use \Phue\Command\SetSceneLightState;
+
+use Phue\Client;
+use Phue\Command\CreateScene;
+use Phue\Command\DeleteScene;
+use Phue\Command\GetLights;
+use Phue\Command\Ping;
+use Phue\Command\SetGroupState;
+use Phue\Command\SetLightState;
+use Phue\Command\SetSceneLightState;
 use Phue\Transport\Exception\ConnectionException;
 
 require_once '../vendor/autoload.php';
@@ -28,7 +29,7 @@ $client = new Client('192.168.1.2', 'Se5sEWE5Lin30rOu5zNG0K7acvZZuNPp0DHT3mfQ');
 
 try {
     $client->sendCommand(
-        new Ping
+        new Ping()
     );
 
 
@@ -187,10 +188,10 @@ function displayGroups($client)
     foreach ($groups as $group) {
         $groupLightIds = implode(', ', $group->getLightIds());
         echo <<<EOT
-            Group Id #{$group->getId()} - {$group->getName()}
-            (Type: {$group->getType()})
-            Lights: {$groupLightIds}<br>
-        EOT;
+                Group Id #{$group->getId()} - {$group->getName()}
+                (Type: {$group->getType()})
+                Lights: {$groupLightIds}<br>
+            EOT;
     }
     return $groups;
 }
@@ -211,9 +212,9 @@ function displayScenes($client)
     foreach ($scenes as $scene) {
         $lightIds = implode(', ', $scene->getLightIds());
         echo <<<EOT
-            Scene Id #{$scene->getId()} - {$scene->getName()}
-            (Lights: {$lightIds})<br>
-        EOT;
+                Scene Id #{$scene->getId()} - {$scene->getName()}
+                (Lights: {$lightIds})<br>
+            EOT;
     }
     return $scenes;
 }

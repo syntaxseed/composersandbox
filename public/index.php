@@ -1,4 +1,5 @@
 <?php
+
 //use TeamTNT\TNTSearch\TNTSearch;
 
 use chillerlan\QRCode\QRCode;

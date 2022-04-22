@@ -3,6 +3,7 @@
  * A sample test for PHPUnit.
  * Run at commandline via: $ vendor/bin/phpunit --testdox tests/TestTest
  */
+
 namespace tests;
 
 use PHPUnit\Framework\TestCase;

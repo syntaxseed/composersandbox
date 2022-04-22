@@ -36,4 +36,4 @@ $tnt->selectIndex($indexName);
 $tnt->fuzziness = true; // Doesn't work>
 $results = @$tnt->search('article');
 
-echo('<br><br>Ids found: ' . join(", ", array_keys($results)));
+echo('<br><br>Ids found: ' . implode(", ", array_keys($results)));

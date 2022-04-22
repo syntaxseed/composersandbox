@@ -1,4 +1,5 @@
 <?php
+
 // Config: Environment sepecific config settings.
 
 return array(

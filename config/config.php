@@ -1,4 +1,5 @@
 <?php
+
 // Config: General application configuration.
 
 return array(

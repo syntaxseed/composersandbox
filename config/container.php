@@ -1,4 +1,5 @@
 <?php
+
 use Pimple\Container;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -35,7 +36,7 @@ $container['tntsearch'] = function () use ($container) {
         "extension" => "txt",
         'storage'   => __DIR__.'/../tntsearch/indexes/'
     ];
-    $tnt = new TNTSearch;
+    $tnt = new TNTSearch();
     $tnt->loadConfig($tntConfig);
     return $tnt;
 };
