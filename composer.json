@@ -14,7 +14,8 @@
         "teamtnt/tntsearch": "^2.9",
         "symfony/mailer": "^6.0",
         "chillerlan/php-qrcode": "^4.3",
-        "syntaxseed/phue": "^1.8"
+        "syntaxseed/phue": "^1.8",
+        "syntaxseed/translator": "^1.0"
     },
     "autoload": {
         "classmap": [],

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ac482b2d704626d3b6f4b7a37e603e4",
+    "content-hash": "437fad3aac1adbb708a974ab34343957",
     "packages": [
         {
             "name": "chillerlan/php-qrcode",
@@ -1516,6 +1516,53 @@
                 }
             ],
             "time": "2022-03-13T16:44:37+00:00"
+        },
+        {
+            "name": "syntaxseed/translator",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/syntaxseed/translator.git",
+                "reference": "c94ae8b30119555c2f2acbc6171adabf443a656f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/syntaxseed/translator/zipball/c94ae8b30119555c2f2acbc6171adabf443a656f",
+                "reference": "c94ae8b30119555c2f2acbc6171adabf443a656f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^7.3|^7.4|^8.0|^8.1|^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Syntaxseed\\Translator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sherri Wheeler",
+                    "homepage": "http://syntaxseed.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Translate strings in your application to multiple languages loaded from JSON files.",
+            "keywords": [
+                "json",
+                "language",
+                "strings",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/syntaxseed/translator/issues",
+                "source": "https://github.com/syntaxseed/translator/tree/v1.0.0"
+            },
+            "time": "2022-12-15T18:16:37+00:00"
         },
         {
             "name": "teamtnt/tntsearch",

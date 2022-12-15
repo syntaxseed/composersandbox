@@ -4,6 +4,7 @@
 
 use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
+use Syntaxseed\Translator\Translator;
 
 require_once '../app/bootstrap.php';
 
@@ -25,6 +26,14 @@ $container['logger']->warning('Logger Test from index.php.');
 //echo( '<pre>');
 //var_dump($container);
 
+echo('<br><br><hr>');
+// Test out SyntaxSeed/Translator.
+$translations = new Translator('en', 'fr');
+$translations->loadLanguageFile(__DIR__.'/../lang/lang.json');
+echo($translations->get('Thank you for using SyntaxSeed/Translator!', null, 'en') . "<br>");
+echo($translations->get('Thank you for using SyntaxSeed/Translator!') . "<br>");
+echo($translations->get('Thank you for using SyntaxSeed/Translator!', null, 'es') . "<br>");
+echo('<hr><br><br>');
 
 
 // QR Code library
