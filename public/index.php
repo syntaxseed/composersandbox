@@ -35,6 +35,8 @@ echo($translations->get('Thank you for using SyntaxSeed/Translator!') . "<br>");
 echo($translations->get('Thank you for using SyntaxSeed/Translator!', null, 'es') . "<br>");
 echo('<hr><br><br>');
 
+// PHP Version
+echo('PHP Version: '.phpversion().'<br /><br />');
 
 // QR Code library
 

@@ -29,7 +29,7 @@
         ],
         "run-checks": [
             "php-cs-fixer fix . --rules=@PSR1,@PSR2,full_opening_tag --using-cache=no --verbose --dry-run",
-            "phpcs --standard=PHPCompatibility --runtime-set testVersion 8.0- --ignore=*/vendor/* . ",
+            "phpcs --standard=PHPCompatibility --runtime-set testVersion 8.3- --ignore=*/vendor/* . ",
             "phpcpd --exclude=vendor/ tests/ ."
         ],
         "run-tests": [
