@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "437fad3aac1adbb708a974ab34343957",
+    "content-hash": "86ea27921f8bfb9664ed7d61cb9a2f7e",
     "packages": [
         {
             "name": "chillerlan/php-qrcode",
@@ -1317,20 +1317,20 @@
         },
         {
             "name": "syntaxseed/iplimiter",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/syntaxseed/iplimiter.git",
-                "reference": "424a8d60f34531c4311b60df683527d66b5d07fc"
+                "reference": "95d378ba24c32d6d8b1c59d48fd78db635205402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/424a8d60f34531c4311b60df683527d66b5d07fc",
-                "reference": "424a8d60f34531c4311b60df683527d66b5d07fc",
+                "url": "https://api.github.com/repos/syntaxseed/iplimiter/zipball/95d378ba24c32d6d8b1c59d48fd78db635205402",
+                "reference": "95d378ba24c32d6d8b1c59d48fd78db635205402",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3|^8.0"
+                "php": "^8.0|^8.1|^8.2|^8.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.5"
@@ -1362,7 +1362,7 @@
             ],
             "support": {
                 "issues": "https://github.com/syntaxseed/iplimiter/issues",
-                "source": "https://github.com/syntaxseed/iplimiter/tree/v2.0.3"
+                "source": "https://github.com/syntaxseed/iplimiter/tree/v2.0.4"
             },
             "funding": [
                 {
@@ -1374,7 +1374,55 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-13T15:58:53+00:00"
+            "time": "2024-12-18T21:32:06+00:00"
+        },
+        {
+            "name": "syntaxseed/libsodium",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/syntaxseed/libsodiumfacade.git",
+                "reference": "fa690d14ff9e7a6cd42b80e16e0b02ad282b018d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/syntaxseed/libsodiumfacade/zipball/fa690d14ff9e7a6cd42b80e16e0b02ad282b018d",
+                "reference": "fa690d14ff9e7a6cd42b80e16e0b02ad282b018d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-sodium": "*",
+                "php": "^8.0|^8.1|^8.2|^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Syntaxseed\\Libsodiumfacade\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sherri Wheeler",
+                    "homepage": "https://syntaxseed.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A wrapper/facade class for PHP's Libsodium extension functions. Covers symmetric and public key encryption functions.",
+            "keywords": [
+                "encryption",
+                "facade",
+                "libsodium",
+                "sodium"
+            ],
+            "support": {
+                "issues": "https://github.com/syntaxseed/libsodiumfacade/issues",
+                "source": "https://github.com/syntaxseed/libsodiumfacade/tree/v1.0.4"
+            },
+            "time": "2024-12-19T00:25:05+00:00"
         },
         {
             "name": "syntaxseed/phue",

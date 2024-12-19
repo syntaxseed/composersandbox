@@ -9,13 +9,14 @@
     "require": {
         "pimple/pimple": "^3.5",
         "monolog/monolog": "^2.5",
-        "syntaxseed/templateseed": "^1.3",
+        "syntaxseed/templateseed": "^1.4",
         "syntaxseed/iplimiter": "^2.0",
         "teamtnt/tntsearch": "^2.9",
         "symfony/mailer": "^6.0",
         "chillerlan/php-qrcode": "^4.3",
         "syntaxseed/phue": "^1.8",
-        "syntaxseed/translator": "^1.0"
+        "syntaxseed/translator": "^1.0",
+        "syntaxseed/libsodium": "^1.0"
     },
     "autoload": {
         "classmap": [],
